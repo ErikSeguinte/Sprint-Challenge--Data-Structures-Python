@@ -1,5 +1,8 @@
 import time
+from binary_search_tree import BSTNode
 
+# Runtime Complexity is O(n^2) using brute force comparisons.
+# Runtime is O(N) using BST : 0.08703327178955078 seconds
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
@@ -13,10 +16,22 @@ f.close()
 duplicates = []  # Return the list of duplicates in this data structure
 
 # Replace the nested for loops below with your improvements
-for name_1 in names_1:
-    for name_2 in names_2:
-        if name_1 == name_2:
-            duplicates.append(name_1)
+# for name_1 in names_1:
+#     for name_2 in names_2:
+#         if name_1 == name_2:
+#             duplicates.append(name_1)
+
+duplicates = list(set(names_1).intersection(set(names_2)))
+
+# bst = BSTNode(names_1[0])
+#
+# for i in names_1[1:]:
+#     bst.insert(i)
+#
+#
+# for i in names_2:
+#     if bst.contains(i):
+#         duplicates.append(i)
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
