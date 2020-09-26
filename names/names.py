@@ -1,8 +1,9 @@
 import time
 from binary_search_tree import BSTNode
 
-# Runtime Complexity is O(n^2) using brute force comparisons.
+# Runtime Complexity is O(n^2) using brute force comparisons: 5.082823753356934 seconds
 # Runtime is O(N) using BST : 0.08703327178955078 seconds
+# Runtime is O(1) using sets: 0.003062009811401367 seconds
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
