@@ -41,7 +41,7 @@ class RingBufferTests(unittest.TestCase):
         self.buffer.append('h')
         self.buffer.append('i')
         self.assertEqual(self.buffer.get(), ['f', 'g', 'h', 'i', 'e'])
-
+    #
     def test_adding_50_elements_to_buffer(self):
         for i in range(50):
             self.buffer.append(i)
